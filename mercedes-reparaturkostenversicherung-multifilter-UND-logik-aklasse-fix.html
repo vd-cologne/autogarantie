@@ -1,0 +1,2018 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Mercedes-Benz Reparaturkostenversicherung – Filteransicht</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        label { font-weight: bold; margin-right: 10px; }
+        select { font-size: 16px; padding: 5px 10px; margin: 10px 20px 20px 0; }
+        table.dataTable thead th {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Mercedes-Benz Reparaturkostenversicherung – Beitragsübersicht mit Filtern</h2>
+
+<label for="modell-filter">Modell:</label>
+<select id="modell-filter">
+    <option value="">Alle</option>
+    <option value="Mercedes A-Klasse" selected>Mercedes A-Klasse</option><option value="Mercedes C-Klasse">Mercedes C-Klasse</option><option value="Mercedes E-Klasse">Mercedes E-Klasse</option><option value="Mercedes EQC">Mercedes EQC</option><option value="Mercedes GLC">Mercedes GLC</option><option value="Mercedes GLE">Mercedes GLE</option>
+</select>
+
+<label for="alter-filter">Alter:</label>
+<select id="alter-filter">
+    <option value="">Alle</option><option value="2">2 Jahre</option><option value="4" selected>4 Jahre</option><option value="6">6 Jahre</option><option value="8">8 Jahre</option><option value="10">10 Jahre</option>
+</select>
+
+<label for="km-filter">Laufleistung:</label>
+<select id="km-filter">
+    <option value="">Alle</option><option value="50000">50000 km</option><option value="100000">100000 km</option><option value="150000">150000 km</option>
+</select>
+
+<label for="ps-filter">Leistung:</label>
+<select id="ps-filter">
+    <option value="">Alle</option><option value="0–100">0–100 PS</option><option value="101–200">101–200 PS</option><option value="201–300">201–300 PS</option>
+</select>
+
+<table id="mb-table" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Modell</th>
+            <th>Alter (Jahre)</th>
+            <th>Laufleistung (km)</th>
+            <th>Leistung (PS)</th>
+            <th>Geschätzter Beitrag / Jahr (€)</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>200.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>220.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>240.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>240.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>260.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>280.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>280.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>300.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>320.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>240.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>260.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>280.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>280.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>300.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>320.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>320.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>340.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>360.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>280.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>300.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>320.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>320.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>340.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>360.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>360.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>380.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>400.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>320.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>340.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>360.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>360.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>380.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>400.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>400.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>420.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>440.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>360.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>380.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>400.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>400.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>420.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>440.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>440.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>460.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes A-Klasse</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>480.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>240.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>264.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>288.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>288.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>312.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>336.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>336.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>360.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>384.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>288.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>312.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>336.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>336.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>360.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>384.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>384.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>408.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>432.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>336.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>360.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>384.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>384.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>408.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>432.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>432.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>456.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>480.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>384.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>408.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>432.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>432.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>456.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>480.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>480.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>504.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>528.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>432.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>456.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>480.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>480.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>504.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>528.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>528.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>552.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes C-Klasse</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>576.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>280.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>308.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>336.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>336.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>364.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>392.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>392.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>420.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>448.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>336.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>364.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>392.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>392.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>420.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>448.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>448.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>476.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>504.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>392.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>420.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>448.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>448.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>476.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>504.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>504.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>532.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>560.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>448.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>476.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>504.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>504.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>532.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>560.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>560.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>588.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>616.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>504.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>532.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>560.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>560.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>588.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>616.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>616.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>644.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes E-Klasse</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>672.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>260.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>286.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>312.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>312.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>338.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>364.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>364.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>390.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>416.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>312.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>338.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>364.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>364.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>390.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>416.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>416.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>442.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>468.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>364.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>390.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>416.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>416.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>442.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>468.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>468.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>494.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>520.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>416.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>442.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>468.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>468.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>494.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>520.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>520.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>546.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>572.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>468.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>494.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>520.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>520.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>546.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>572.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>572.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>598.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLC</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>624.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>300.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>330.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>360.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>360.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>390.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>420.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>420.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>450.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>480.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>360.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>390.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>420.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>420.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>450.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>480.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>480.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>510.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>540.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>420.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>450.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>480.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>480.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>510.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>540.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>540.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>570.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>600.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>480.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>510.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>540.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>540.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>570.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>600.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>600.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>630.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>660.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>540.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>570.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>600.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>600.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>630.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>660.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>660.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>690.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes GLE</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>720.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>320.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>352.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>384.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>384.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>416.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>448.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>448.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>480.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>512.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>384.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>416.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>448.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>448.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>480.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>512.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>512.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>544.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>576.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>448.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>480.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>512.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>512.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>544.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>576.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>576.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>608.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>640.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>512.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>544.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>576.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>576.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>608.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>640.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>640.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>672.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>704.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>576.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>608.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>640.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>640.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>672.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>704.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>704.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>736.0</td>
+        </tr>
+        <tr>
+            <td>Mercedes EQC</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>768.0</td>
+        </tr>
+    </tbody>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $.fn.dataTable.ext.search.push(
+            function(settings, data, dataIndex) {
+                var modell = $('#modell-filter').val();
+                var alter = $('#alter-filter').val();
+                var laufleistung = $('#km-filter').val();
+                var ps = $('#ps-filter').val();
+
+                var rowModell = data[0];
+                var rowAlter = data[1];
+                var rowLaufleistung = data[2];
+                var rowPS = data[3];
+
+                if ((modell === '' || rowModell === modell) &&
+                    (alter === '' || rowAlter === alter) &&
+                    (laufleistung === '' || rowLaufleistung === laufleistung) &&
+                    (ps === '' || rowPS === ps)) {
+                    return true;
+                }
+                return false;
+            }
+        );
+
+        var table = $('#mb-table').DataTable({
+            "pageLength": 25,
+            "language": {
+                "search": "Suche:",
+                "lengthMenu": "Zeige _MENU_ Einträge",
+                "info": "Zeige _START_ bis _END_ von _TOTAL_ Einträgen",
+                "paginate": {
+                    "first": "Erste",
+                    "last": "Letzte",
+                    "next": "Weiter",
+                    "previous": "Zurück"
+                }
+            }
+        });
+
+        function filterColumn(columnIndex, value) {
+            if (value) {
+                table.column(columnIndex).search('^' + value + '$', true, false).draw();
+            } else {
+                table.column(columnIndex).search('').draw();
+            }
+        }
+
+        $('#modell-filter').on('change', function () {
+            filterColumn(0, this.value);
+        });
+        $('#alter-filter').on('change', function () {
+            filterColumn(1, this.value);
+        });
+        $('#km-filter').on('change', function () {
+            filterColumn(2, this.value);
+        });
+        $('#ps-filter').on('change', function () {
+            filterColumn(3, this.value);
+        });
+
+        
+        var initValue = $('#modell-filter').val();
+        table.column(0).search('^' + initValue + '$', true, false).draw();
+        $('#alter-filter').trigger('change');
+    
+    });
+</script>
+
+</body>
+</html>
