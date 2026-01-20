@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>BMW Reparaturkostenversicherung – Filteransicht</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        label { font-weight: bold; margin-right: 10px; }
+        select { font-size: 16px; padding: 5px 10px; margin: 10px 20px 20px 0; }
+        table.dataTable thead th {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<h2>BMW Reparaturkostenversicherung – Beitragsübersicht mit Filtern</h2>
+
+<label for="modell-filter">Modell:</label>
+<select id="modell-filter">
+    <option value="">Alle</option>
+    <option value="BMW 1er">BMW 1er</option><option value="BMW 3er">BMW 3er</option><option value="BMW 5er">BMW 5er</option><option value="BMW X1">BMW X1</option><option value="BMW X3">BMW X3</option><option value="BMW i4">BMW i4</option>
+</select>
+
+<label for="alter-filter">Alter:</label>
+<select id="alter-filter">
+    <option value="">Alle</option><option value="2">2 Jahre</option><option value="4" selected>4 Jahre</option><option value="6">6 Jahre</option><option value="8">8 Jahre</option><option value="10">10 Jahre</option>
+</select>
+
+<label for="km-filter">Laufleistung:</label>
+<select id="km-filter">
+    <option value="">Alle</option><option value="50000">50000 km</option><option value="100000">100000 km</option><option value="150000">150000 km</option>
+</select>
+
+<label for="ps-filter">Leistung:</label>
+<select id="ps-filter">
+    <option value="">Alle</option><option value="0–100">0–100 PS</option><option value="101–200">101–200 PS</option><option value="201–300">201–300 PS</option>
+</select>
+
+<table id="bmw-table" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Modell</th>
+            <th>Alter (Jahre)</th>
+            <th>Laufleistung (km)</th>
+            <th>Leistung (PS)</th>
+            <th>Geschätzter Beitrag / Jahr (€)</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <td>BMW 1er</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>220.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>242.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>264.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>264.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>286.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>308.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>308.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>330.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>352.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>264.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>286.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>308.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>308.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>330.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>352.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>352.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>374.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>396.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>308.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>330.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>352.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>352.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>374.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>396.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>396.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>418.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>440.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>352.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>374.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>396.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>396.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>418.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>440.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>440.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>462.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>484.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>396.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>418.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>440.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>440.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>462.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>484.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>484.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>506.0</td>
+        </tr>
+        <tr>
+            <td>BMW 1er</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>528.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>250.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>275.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>300.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>300.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>325.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>350.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>350.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>375.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>400.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>300.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>325.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>350.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>350.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>375.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>400.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>400.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>425.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>450.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>350.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>375.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>400.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>400.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>425.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>450.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>450.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>475.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>500.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>400.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>425.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>450.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>450.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>475.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>500.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>500.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>525.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>550.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>450.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>475.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>500.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>500.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>525.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>550.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>550.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>575.0</td>
+        </tr>
+        <tr>
+            <td>BMW 3er</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>600.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>280.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>308.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>336.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>336.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>364.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>392.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>392.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>420.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>448.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>336.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>364.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>392.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>392.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>420.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>448.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>448.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>476.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>504.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>392.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>420.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>448.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>448.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>476.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>504.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>504.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>532.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>560.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>448.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>476.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>504.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>504.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>532.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>560.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>560.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>588.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>616.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>504.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>532.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>560.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>560.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>588.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>616.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>616.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>644.0</td>
+        </tr>
+        <tr>
+            <td>BMW 5er</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>672.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>260.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>286.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>312.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>312.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>338.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>364.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>364.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>390.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>416.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>312.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>338.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>364.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>364.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>390.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>416.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>416.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>442.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>468.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>364.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>390.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>416.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>416.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>442.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>468.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>468.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>494.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>520.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>416.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>442.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>468.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>468.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>494.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>520.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>520.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>546.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>572.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>468.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>494.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>520.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>520.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>546.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>572.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>572.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>598.0</td>
+        </tr>
+        <tr>
+            <td>BMW X1</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>624.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>290.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>319.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>348.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>348.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>377.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>406.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>406.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>435.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>464.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>348.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>377.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>406.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>406.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>435.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>464.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>464.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>493.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>522.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>406.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>435.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>464.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>464.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>493.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>522.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>522.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>551.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>580.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>464.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>493.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>522.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>522.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>551.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>580.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>580.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>609.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>638.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>522.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>551.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>580.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>580.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>609.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>638.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>638.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>667.0</td>
+        </tr>
+        <tr>
+            <td>BMW X3</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>696.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>310.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>341.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>2</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>372.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>372.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>403.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>2</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>434.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>434.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>465.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>2</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>496.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>372.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>403.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>4</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>434.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>434.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>465.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>4</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>496.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>496.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>527.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>4</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>558.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>434.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>465.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>6</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>496.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>496.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>527.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>6</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>558.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>558.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>589.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>6</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>620.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>496.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>527.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>8</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>558.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>558.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>589.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>8</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>620.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>620.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>651.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>8</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>682.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>0–100</td>
+            <td>558.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>101–200</td>
+            <td>589.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>10</td>
+            <td>50000</td>
+            <td>201–300</td>
+            <td>620.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>0–100</td>
+            <td>620.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>101–200</td>
+            <td>651.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>10</td>
+            <td>100000</td>
+            <td>201–300</td>
+            <td>682.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>0–100</td>
+            <td>682.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>101–200</td>
+            <td>713.0</td>
+        </tr>
+        <tr>
+            <td>BMW i4</td>
+            <td>10</td>
+            <td>150000</td>
+            <td>201–300</td>
+            <td>744.0</td>
+        </tr>
+    </tbody>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $.fn.dataTable.ext.search.push(
+            function(settings, data, dataIndex) {
+                var modell = $('#modell-filter').val();
+                var alter = $('#alter-filter').val();
+                var laufleistung = $('#km-filter').val();
+                var ps = $('#ps-filter').val();
+
+                var rowModell = data[0];
+                var rowAlter = data[1];
+                var rowLaufleistung = data[2];
+                var rowPS = data[3];
+
+                if ((modell === '' || rowModell === modell) &&
+                    (alter === '' || rowAlter === alter) &&
+                    (laufleistung === '' || rowLaufleistung === laufleistung) &&
+                    (ps === '' || rowPS === ps)) {
+                    return true;
+                }
+                return false;
+            }
+        );
+
+        var table = $('#bmw-table').DataTable({
+            "pageLength": 25,
+            "language": {
+                "search": "Suche:",
+                "lengthMenu": "Zeige _MENU_ Einträge",
+                "info": "Zeige _START_ bis _END_ von _TOTAL_ Einträgen",
+                "paginate": {
+                    "first": "Erste",
+                    "last": "Letzte",
+                    "next": "Weiter",
+                    "previous": "Zurück"
+                }
+            }
+        });
+
+        $('#modell-filter').on('change', function () {
+            table.draw();
+        });
+        $('#alter-filter').on('change', function () {
+            table.draw();
+        });
+        $('#km-filter').on('change', function () {
+            table.draw();
+        });
+        $('#ps-filter').on('change', function () {
+            table.draw();
+        });
+
+        $('#alter-filter').trigger('change');
+    });
+</script>
+
+</body>
+</html>
